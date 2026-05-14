@@ -6,7 +6,7 @@ import aboutImage from '@/assets/about.png'
 const About = () => {
   return (
     <section id="nosotros" className="bg-blanco-hueso py-24">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+      <div className="max-w-[1500px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         {/* Columna izquierda — Texto */}
         <motion.div
           initial={{ opacity: 0, y: 28 }}

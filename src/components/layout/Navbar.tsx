@@ -9,7 +9,7 @@ import logo from '../../assets/logo.png'
 const navLinks = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/service' },
-  { label: 'Nosotros', href: '/#nosotros' },
+  { label: 'Nosotros', href: '/about' },
   { label: 'Beneficios', href: '/#beneficios' },
   { label: 'Contacto', href: '/#contacto' },
 ]
@@ -38,6 +38,10 @@ const Navbar = () => {
 
     if (href === '/service') {
       return location.pathname === '/service'
+    }
+
+    if (href === '/about') {
+      return location.pathname === '/about'
     }
 
     return location.pathname + location.hash === href

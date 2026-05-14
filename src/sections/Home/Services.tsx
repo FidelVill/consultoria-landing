@@ -4,7 +4,7 @@ import { services } from '@/constants/services'
 const Services = () => {
   return (
     <section id="servicios" className="bg-blanco-hueso py-8">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-[1500px] mx-auto px-4 md:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}

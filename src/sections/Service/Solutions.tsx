@@ -36,7 +36,7 @@ const Solutions = () => {
       id="soluciones-contables"
       className="relative bg-blanco-hueso overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-10">
+      <div className="max-w-[1500px] mx-auto px-4 md:px-8 py-16 lg:py-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
