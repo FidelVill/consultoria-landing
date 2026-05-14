@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 
@@ -6,26 +7,56 @@ import Button from '@/components/ui/Button'
 import logo from '../../assets/logo.png'
 
 const navLinks = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Servicios', href: '#servicios' },
-  { label: 'Nosotros', href: '#nosotros' },
-  { label: 'Beneficios', href: '#beneficios' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Servicios', href: '/service' },
+  { label: 'Nosotros', href: '/#nosotros' },
+  { label: 'Beneficios', href: '/#beneficios' },
+  { label: 'Contacto', href: '/#contacto' },
 ]
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [active, setActive] = useState('Inicio')
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleNavigate = (href: string) => {
+    setIsOpen(false)
+
+    navigate(href)
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }
+
+  const isActiveLink = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/'
+    }
+
+    if (href === '/service') {
+      return location.pathname === '/service'
+    }
+
+    return location.pathname + location.hash === href
+  }
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 border-b border-dorado-principal/15 bg-black/80 backdrop-blur-xl">
+    <nav className="sticky top-0 left-0 w-full z-50 border-b border-dorado-principal/15 bg-black/95 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
         {/* Logo */}
-        <a
-          href="#inicio"
+        <Link
+          to="/"
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            })
+          }
           className="flex items-center gap-3"
-          onClick={() => setActive('Inicio')}
         >
           <img
             src={logo}
@@ -42,44 +73,44 @@ const Navbar = () => {
               Consultoría contable
             </p>
           </div>
-        </a>
+        </Link>
 
-        {/* Links desktop */}
+        {/* Desktop */}
         <ul className="hidden lg:flex items-center gap-9">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                onClick={() => setActive(link.label)}
-                className={`
-                  relative pb-2
-                  font-inter text-sm tracking-wide
-                  transition-all duration-300
-                  ${active === link.label
-                    ? 'text-dorado-principal'
-                    : 'text-blanco-hueso/65 hover:text-blanco-hueso'
-                  }
-                `}
-              >
-                {link.label}
+          {navLinks.map((link) => {
+            const active = isActiveLink(link.href)
 
-                <span
+            return (
+              <li key={link.label}>
+                <button
+                  onClick={() => handleNavigate(link.href)}
                   className={`
-                    absolute left-1/2 -translate-x-1/2 bottom-0
-                    h-[2px] rounded-full bg-dorado-principal
+                    relative pb-2
+                    font-inter text-sm tracking-wide
                     transition-all duration-300
-                    ${active === link.label
-                      ? 'w-6 opacity-100'
-                      : 'w-0 opacity-0'
+                    ${active
+                      ? 'text-dorado-principal'
+                      : 'text-blanco-hueso/65 hover:text-blanco-hueso'
                     }
                   `}
-                />
-              </a>
-            </li>
-          ))}
+                >
+                  {link.label}
+
+                  <span
+                    className={`
+                      absolute left-1/2 -translate-x-1/2 bottom-0
+                      h-[2px] rounded-full bg-dorado-principal
+                      transition-all duration-300
+                      ${active ? 'w-6 opacity-100' : 'w-0 opacity-0'}
+                    `}
+                  />
+                </button>
+              </li>
+            )
+          })}
         </ul>
 
-        {/* Botón WhatsApp desktop */}
+        {/* WhatsApp */}
         <div className="hidden lg:block">
           <Button
             variant="outline"
@@ -103,7 +134,7 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Botón mobile */}
+        {/* Mobile button */}
         <button
           className="
             lg:hidden text-blanco-hueso
@@ -119,28 +150,29 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Menú mobile */}
+      {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-dorado-principal/15 px-6 py-6 flex flex-col gap-5">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => {
-                setActive(link.label)
-                setIsOpen(false)
-              }}
-              className={`
-                font-inter text-sm tracking-wide transition-colors
-                ${active === link.label
-                  ? 'text-dorado-principal'
-                  : 'text-blanco-hueso/75 hover:text-dorado-principal'
-                }
-              `}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const active = isActiveLink(link.href)
+
+            return (
+              <button
+                key={link.label}
+                onClick={() => handleNavigate(link.href)}
+                className={`
+                  text-left
+                  font-inter text-sm tracking-wide transition-colors
+                  ${active
+                    ? 'text-dorado-principal'
+                    : 'text-blanco-hueso/75 hover:text-dorado-principal'
+                  }
+                `}
+              >
+                {link.label}
+              </button>
+            )
+          })}
 
           <div className="pt-3">
             <Button
