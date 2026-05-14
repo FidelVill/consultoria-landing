@@ -1,61 +1,83 @@
 import { motion } from 'framer-motion'
 import { services } from '@/constants/services'
-import { fadeUpVariants, staggerContainer, fadeUpItem } from '@/hooks/useFadeUp'
 
 const Services = () => {
   return (
-    <section id="servicios" className="bg-blanco-hueso pt-10 pb-16">
-      <motion.div
-        variants={fadeUpVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.15 }}
-        className="max-w-7xl mx-auto px-6"
-      >
-
+    <section id="servicios" className="bg-blanco-hueso py-8">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-14">
-          <p className="font-inter text-sm font-semibold tracking-widest text-dorado-principal uppercase mb-3">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
+          <p className="font-inter text-sm font-semibold tracking-[0.35em] text-dorado-principal uppercase mb-5">
             Servicios
           </p>
-          <h2 className="font-cormorant text-4xl md:text-5xl font-bold text-negro-premium leading-tight">
-            Soluciones contables <br /> para cada etapa de tu negocio.
-          </h2>
-          <div className="w-12 h-0.5 bg-dorado-principal mx-auto mt-4" />
-        </div>
 
-        {/* Cards */}
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {services.map((service) => {
-            const Icon = service.icon
-            return (
-              <motion.div
-                variants={fadeUpItem}
-                key={service.id}
-                className="bg-white border border-gris-claro rounded-sm px-8 py-12 flex flex-col gap-5 hover:border-dorado-principal hover:shadow-lg transition-all duration-300 group items-center justify-center min-h-[280px]"
-              >
-                <Icon
-                  size={42}
-                  className="text-dorado-principal group-hover:scale-110 transition-transform duration-300"
-                />
-                <h3 className="font-cormorant text-xl font-bold text-negro-premium">
-                  {service.title}
-                </h3>
-                <p className="font-inter text-sm text-center text-negro-premium/60 leading-relaxed">
-                  {service.description}
-                </p>
-              </motion.div>
-            )
-          })}
+          <h2 className="font-cormorant text-4xl md:text-6xl font-semibold text-negro-premium leading-none">
+            Soluciones contables <br className="hidden md:block" />
+            para cada etapa de tu negocio.
+          </h2>
+
+          <div className="w-14 h-[2px] bg-dorado-principal mx-auto mt-7" />
         </motion.div>
 
-      </motion.div>
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, index) => {
+            const Icon = service.icon
+
+            return (
+              <motion.article
+                key={service.id}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.55,
+                  delay: index * 0.08,
+                  ease: 'easeOut',
+                }}
+                viewport={{ once: true, amount: 0.25 }}
+                className="
+                  group relative min-h-[310px]
+                  rounded-2xl border border-gris-claro bg-white
+                  px-8 py-10 text-center
+                  flex flex-col items-center justify-center
+                  shadow-[0_10px_30px_rgba(10,10,10,0.04)]
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  hover:border-dorado-principal
+                  hover:shadow-[0_24px_60px_rgba(10,10,10,0.10)]
+                "
+              >
+                <div className="absolute left-6 right-6 bottom-0 h-[3px] bg-dorado-principal scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                <div
+                  className="
+                    mb-7 flex h-16 w-16 items-center justify-center
+                    rounded-full bg-dorado-principal/10 text-dorado-principal
+                    transition-all duration-300
+                    group-hover:bg-dorado-principal group-hover:text-white
+                    group-hover:scale-105
+                  "
+                >
+                  <Icon size={34} strokeWidth={1.8} />
+                </div>
+
+                <h3 className="font-space text-xl font-bold text-negro-premium mb-4 tracking-[-0.04em]">
+                  {service.title}
+                </h3>
+
+                <p className="font-inter text-sm leading-relaxed text-negro-premium/60 max-w-[230px]">
+                  {service.description}
+                </p>
+              </motion.article>
+            )
+          })}
+        </div>
+      </div>
     </section>
   )
 }

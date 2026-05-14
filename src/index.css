@@ -13,6 +13,12 @@
   --font-playfair: "Playfair Display", serif;
   --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+
+  /* NUEVAS */
+  --font-manrope: "Manrope", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-dm-serif: "DM Serif Display", serif;
+  --font-numbers: "JetBrains Mono", monospace;
 }
 
 /* Scroll suave */
@@ -27,7 +33,70 @@ body {
   color: #0A0A0A;
 }
 
-h1, h2, h3, h4 {
+/*h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-cormorant);
+} */
+
+/* Hero / títulos principales */
+h1 {
+  font-family: var(--font-dm-serif);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
 }
 
+/* Títulos de sección */
+h2 {
+  font-family: var(--font-cormorant);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* Subtítulos */
+h3 {
+  font-family: var(--font-space);
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+/* Cards / labels */
+h4 {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* NUEVO */
+
+/* Titulos mas premium */
+.title-premium {
+  font-family: var(--font-dm-serif);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* Titulos modernos */
+.title-modern {
+  font-family: var(--font-space);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+/* Numeros mas bonitos */
+.number-text {
+  font-family: var(--font-numbers);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Texto elegante UI */
+.ui-text {
+  font-family: var(--font-manrope);
+}
