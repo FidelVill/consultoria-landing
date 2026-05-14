@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { MessageCircle, Menu, X } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
+
 import Button from '@/components/ui/Button'
 import logo from '../../assets/logo.png'
 
@@ -60,7 +62,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <Button
             variant="outline"
-            icon={<MessageCircle size={16} />}
+            icon={<FaWhatsapp size={16} />}
             onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
           >
             WhatsApp
@@ -101,7 +103,7 @@ const Navbar = () => {
           <div className="pt-3">
             <Button
               variant="outline"
-              icon={<MessageCircle size={16} />}
+              icon={<FaWhatsapp size={16} />}
               onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
             >
               WhatsApp

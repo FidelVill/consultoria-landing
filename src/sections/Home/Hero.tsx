@@ -1,8 +1,9 @@
 import { MessageCircle, ChevronRight } from 'lucide-react'
+import { FaWhatsapp } from 'react-icons/fa'
 import Button from '@/components/ui/Button'
 
-import logo from '../assets/logo.png'
-import bgHero from '../assets/bg-hero.png'
+import logo from '../../assets/logo.png'
+import bgHero from '../../assets/bg-hero.png'
 
 const Hero = () => {
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
           <div className="flex flex-wrap gap-5 mt-4">
             <Button
               variant="primary"
-              icon={<MessageCircle size={18} />}
+              icon={<FaWhatsapp size={18} />}
               onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
             >
               Hablar por WhatsApp
@@ -61,7 +62,7 @@ const Hero = () => {
           <img
             src={logo}
             alt="Carlos González"
-            className="w-72 md:w-[460px] lg:w-[520px] object-contain drop-shadow-[0_0_50px_rgba(212,175,55,0.30)]"
+            className="w-48 md:w-72 lg:w-80 object-contain drop-shadow-[0_0_50px_rgba(212,175,55,0.30)]"
           />
 
           <div className="text-center -mt-4">
