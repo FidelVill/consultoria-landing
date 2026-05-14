@@ -1,7 +1,7 @@
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import Solutions from '@/sections/Service/Solutions'
-import Features from '@/sections/Service/features'
+import Features from '@/sections/Service/Features'
 import Process from '@/sections/Service/Process'
 
 const Service = () => {
