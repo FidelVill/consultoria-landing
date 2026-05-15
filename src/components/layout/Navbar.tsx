@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/service' },
   { label: 'Nosotros', href: '/about' },
-  { label: 'Beneficios', href: '/#beneficios' },
+  { label: 'Beneficios', href: '/benefits' },
   { label: 'Contacto', href: '/#contacto' },
 ]
 
@@ -119,7 +119,7 @@ const Navbar = () => {
           <Button
             variant="outline"
             icon={<FaWhatsapp size={16} />}
-            onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
+            onClick={() => window.open('https://wa.me/524431415032', '_blank')}
             className="
               rounded-full
               border border-dorado-principal/35
@@ -182,7 +182,7 @@ const Navbar = () => {
             <Button
               variant="outline"
               icon={<FaWhatsapp size={16} />}
-              onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
+              onClick={() => window.open('https://wa.me/524431415032', '_blank')}
               className="
                 w-full justify-center rounded-full
                 border border-dorado-principal/35

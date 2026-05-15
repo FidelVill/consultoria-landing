@@ -3,7 +3,7 @@ import Stats from '@/sections/Home/Stats'
 import Hero from '@/sections/Home/Hero'
 import Services from '@/sections/Home/Services'
 import About from '@/sections/Home/About'
-import CTA from '@/sections/Home/CTA'
+import CTA from '@/sections/shared/CTA'
 import Footer from '@/components/layout/Footer'
 
 const Home = () => {

@@ -46,7 +46,7 @@ const CTA = () => {
           <Button
             variant="primary"
             icon={<FaWhatsapp size={18} />}
-            onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
+            onClick={() => window.open('https://wa.me/524431415032', '_blank')}
             className="
               shrink-0 rounded-full px-8 py-4
               bg-dorado-principal text-white

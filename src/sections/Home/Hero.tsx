@@ -72,7 +72,7 @@ const Hero = () => {
             <Button
               variant="primary"
               icon={<FaWhatsapp size={18} />}
-              onClick={() => window.open('https://wa.me/TUNUMERO', '_blank')}
+              onClick={() => window.open('https://wa.me/524431415032', '_blank')}
               className="rounded-full px-7"
             >
               Hablar por WhatsApp
