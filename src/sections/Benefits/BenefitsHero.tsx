@@ -16,7 +16,7 @@ const BenefitsHero = () => {
           animate="visible"
           className="flex-1 flex flex-col gap-6 max-w-[640px] ml-auto
                       px-6 md:pl-[max(24px,calc((100vw-1280px)/2+24px))]
-                      pt-32 pb-16"
+                      pt-20 pb-16"
         >
           <h1 className="font-cormorant text-5xl md:text-6xl font-semibold text-negro-premium leading-[0.95] mb-8">
             Más que números,{' '}
@@ -38,13 +38,14 @@ const BenefitsHero = () => {
               variant="primary"
               icon={<CalendarCheck size={18} />}
               onClick={() => window.open('https://wa.me/524431415032', '_blank')}
+              className="bg-dorado-principal text-white border border-dorado-principal hover:bg-transparent hover:text-dorado-principal w-full md:w-auto transition-all duration-300"
             >
               Agendar asesoría
             </Button>
             <Button
               variant="outline"
               icon={<MessageCircle size={18} />}
-              className="border-negro-premium text-negro-premium hover:border-dorado-principal hover:text-dorado-principal"
+              className="border-negro-premium text-negro-premium hover:border-dorado-principal hover:text-dorado-principal w-full md:w-auto"
               onClick={() => window.open('https://wa.me/524431415032', '_blank')}
             >
               Hablar por WhatsApp

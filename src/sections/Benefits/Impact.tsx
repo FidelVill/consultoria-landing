@@ -62,7 +62,7 @@ const Impact = () => {
               <motion.div
                 key={item.id}
                 variants={fadeUpItem}
-                className="flex flex-col gap-4 p-8 border border-gris-claro rounded-sm hover:border-dorado-principal hover:shadow-md transition-all duration-300 group"
+                className="flex flex-col gap-4 p-8 border items-center border-gris-claro rounded-sm hover:border-dorado-principal hover:shadow-md transition-all duration-300 group"
               >
                 <Icon
                   size={32}
@@ -71,7 +71,7 @@ const Impact = () => {
                 <h3 className="font-cormorant text-2xl font-bold text-negro-premium">
                   {item.title}
                 </h3>
-                <p className="font-inter text-sm text-negro-premium/60 leading-relaxed">
+                <p className="font-inter text-sm text-center text-negro-premium/60 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
