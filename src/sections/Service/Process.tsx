@@ -39,7 +39,7 @@ const steps = [
 
 const Process = () => {
     return (
-        <section className="bg-blanco-hueso py-10">
+        <section className="bg-blanco-hueso py-5">
             <div className="max-w-[1500px] mx-auto px-4 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}

@@ -86,32 +86,30 @@ const features = [
 
 const Features = () => {
     return (
-        <section className="bg-blanco-hueso py-20">
-            <div className="max-w-[1500px] mx-auto px-4 md:px-8">
-                {/* Header */}
+        <section className="bg-blanco-hueso py-14 md:py-20">
+            <div className="max-w-[1500px] mx-auto px-5 sm:px-6 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: 'easeOut' }}
                     viewport={{ once: true }}
-                    className="text-center max-w-3xl mx-auto mb-16"
+                    className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
                 >
-                    <p className="font-inter text-sm font-semibold tracking-[0.35em] text-dorado-principal uppercase mb-5">
+                    <p className="font-inter text-xs md:text-sm font-semibold tracking-[0.28em] md:tracking-[0.35em] text-dorado-principal uppercase mb-4 md:mb-5">
                         ¿Qué incluye?
                     </p>
 
-                    <h2 className="font-cormorant text-4xl md:text-6xl font-semibold text-negro-premium leading-none mb-6">
+                    <h2 className="font-cormorant text-[38px] sm:text-5xl md:text-6xl font-semibold text-negro-premium leading-[0.95] md:leading-none mb-5 md:mb-6">
                         Nuestros servicios de contabilidad
                     </h2>
 
-                    <p className="font-inter text-negro-premium/60 text-base md:text-lg leading-relaxed">
+                    <p className="font-inter text-negro-premium/60 text-sm md:text-lg leading-relaxed max-w-2xl mx-auto">
                         Soluciones completas para mantener tus finanzas en orden y tu
                         negocio siempre al día.
                     </p>
                 </motion.div>
 
-                {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-7">
                     {features.map((feature, index) => {
                         const Icon = feature.icon
 
@@ -128,28 +126,28 @@ const Features = () => {
                                 viewport={{ once: true, amount: 0.2 }}
                                 className="
                   group rounded-2xl bg-white border border-gris-claro
-                  p-8 shadow-[0_10px_35px_rgba(10,10,10,0.04)]
+                  p-6 md:p-8
+                  shadow-[0_10px_35px_rgba(10,10,10,0.04)]
                   hover:shadow-[0_20px_60px_rgba(10,10,10,0.08)]
                   hover:-translate-y-1
                   transition-all duration-300
                 "
                             >
-                                {/* Top */}
-                                <div className="flex items-start gap-5 mb-6">
+                                <div className="flex flex-col sm:flex-row sm:items-start gap-5 mb-6">
                                     <div
                                         className="
-                      h-16 w-16 rounded-full
+                      h-14 w-14 md:h-16 md:w-16 rounded-full
                       bg-dorado-principal/10
                       text-dorado-principal
                       flex items-center justify-center
                       shrink-0
                     "
                                     >
-                                        <Icon size={32} strokeWidth={1.8} />
+                                        <Icon size={30} strokeWidth={1.8} />
                                     </div>
 
                                     <div>
-                                        <h3 className="font-cormorant text-3xl font-semibold text-negro-premium mb-2 leading-none">
+                                        <h3 className="font-cormorant text-3xl md:text-[34px] font-semibold text-negro-premium mb-2 leading-[0.95]">
                                             {feature.title}
                                         </h3>
 
@@ -159,7 +157,6 @@ const Features = () => {
                                     </div>
                                 </div>
 
-                                {/* Items */}
                                 <ul className="space-y-3">
                                     {feature.items.map((item) => (
                                         <li

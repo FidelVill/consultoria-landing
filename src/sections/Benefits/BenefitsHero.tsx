@@ -1,73 +1,97 @@
 import { motion } from 'framer-motion'
-import { CalendarCheck, MessageCircle } from 'lucide-react'
+import { CalendarCheck } from 'lucide-react'
 import Button from '@/components/ui/Button'
-import Desk from '../../assets/accounting-desk.png'
-import { fadeUpVariants } from '@/hooks/useFadeUp'
+
+import Desk from '@/assets/accounting-desk.png'
 
 const BenefitsHero = () => {
   return (
     <section className="bg-blanco-hueso overflow-hidden">
-      <div className="flex items-stretch min-h-[550px]">
-
-        {/* Columna izquierda */}
+      <div className="max-w-[1900px] mx-auto lg:min-h-[900px] grid grid-cols-1 lg:grid-cols-[0.78fr_1.22fr] items-center">
+        {/* Left */}
         <motion.div
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex-1 flex flex-col gap-6 max-w-[640px] ml-auto
-                      px-6 md:pl-[max(24px,calc((100vw-1280px)/2+24px))]
-                      pt-20 pb-16"
+          initial={{ opacity: 0, x: -28 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="
+            relative z-10
+            px-5 sm:px-6 md:px-10 lg:pl-24 xl:pl-32 lg:pr-8
+            py-10 md:py-12 lg:py-14
+            text-center lg:text-left
+          "
         >
-          <h1 className="font-cormorant text-5xl md:text-6xl font-semibold text-negro-premium leading-[0.95] mb-8">
-            Más que números,{' '}
-            <span className="text-dorado-principal">
+          <p className="font-inter text-xs md:text-sm font-semibold tracking-[0.25em] md:tracking-[0.35em] text-dorado-principal uppercase mb-4 md:mb-5">
+            Beneficios
+          </p>
+
+          <h1 className="font-cormorant text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-semibold text-negro-premium leading-[1] lg:leading-[0.92] mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0">
+            Más que números,
+            <span className="text-dorado-principal block">
               estrategias que impulsan tu negocio.
             </span>
           </h1>
 
-          <div className="w-12 h-0.5 bg-dorado-principal" />
+          <div className="w-14 h-[2px] bg-dorado-principal mb-6 md:mb-8 mx-auto lg:mx-0" />
 
-          <p className="font-inter text-negro-premium/65 text-base md:text-lg leading-relaxed mb-10 max-w-xl">
-            En nuestra consultoría contable, convertimos la información financiera
-            en decisiones inteligentes que generan crecimiento, estabilidad y
-            tranquilidad para ti y tu empresa.
+          <p className="font-inter text-negro-premium/65 text-base md:text-lg leading-relaxed mb-7 md:mb-9 max-w-xl mx-auto lg:mx-0">
+            En nuestra consultoría contable, convertimos la información
+            financiera en decisiones inteligentes que generan crecimiento,
+            estabilidad y tranquilidad para ti y tu empresa.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex justify-center lg:justify-start">
             <Button
               variant="primary"
               icon={<CalendarCheck size={18} />}
-              onClick={() => window.open('https://wa.me/524431415032', '_blank')}
-              className="bg-dorado-principal text-white border border-dorado-principal hover:bg-transparent hover:text-dorado-principal w-full md:w-auto transition-all duration-300"
+              onClick={() =>
+                window.open('https://wa.me/524431415032', '_blank')
+              }
+              className="
+                rounded-full
+                px-8
+                h-12 md:h-14
+                w-full max-w-[360px]
+                sm:w-auto sm:min-w-[240px]
+              "
             >
               Agendar asesoría
-            </Button>
-            <Button
-              variant="outline"
-              icon={<MessageCircle size={18} />}
-              className="border-negro-premium text-negro-premium hover:border-dorado-principal hover:text-dorado-principal w-full md:w-auto"
-              onClick={() => window.open('https://wa.me/524431415032', '_blank')}
-            >
-              Hablar por WhatsApp
             </Button>
           </div>
         </motion.div>
 
-        {/* Columna derecha — imagen al borde */}
+        {/* Right */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-          className="flex-1 relative hidden md:block"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="
+            relative
+            h-[320px]
+            sm:h-[420px]
+            md:h-[520px]
+            lg:h-[900px]
+            overflow-hidden
+          "
         >
-          <img
-            src={Desk}
-            alt="Consultoría contable"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ clipPath: 'ellipse(100% 100% at 100% 50%)' }}
-          />
-        </motion.div>
+          <div className="absolute inset-0 lg:[clip-path:ellipse(100%_120%_at_100%_50%)]">
+            <img
+              src={Desk}
+              alt="Consultoría contable"
+              className="
+                w-full h-full
+                object-cover
+                object-center
+                lg:scale-[1.18]
+              "
+            />
 
+            <div className="absolute inset-0 bg-gradient-to-t from-blanco-hueso via-transparent to-transparent lg:bg-gradient-to-l lg:from-black/5 lg:via-transparent lg:to-blanco-hueso" />
+          </div>
+
+          <div className="absolute inset-0 bg-dorado-principal/5 blur-3xl scale-110 pointer-events-none" />
+        </motion.div>
       </div>
     </section>
   )
