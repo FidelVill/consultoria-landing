@@ -23,7 +23,7 @@ const ContactLocation = () => {
                     <div className="relative h-[320px] sm:h-[420px] lg:h-[480px] overflow-hidden">
                         <iframe
                             title="Ubicación Carlos González Consultoría Contable"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.7655243195936!2d-102.49128872500758!3d19.64041658168391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842e43b23b90ab09%3A0xee833c41aa23abe7!2sFrancisco%20J.%20M%C3%BAgica%2017-Int.%204%2C%20Centro%2C%2059963%20Santa%20Clara%20de%20Valladares%2C%20Mich.%2C%20M%C3%A9xico!5e1!3m2!1ses!2sus!4v1778885892908!5m2!1ses!2sus"
+                            src="https://www.google.com/maps?q=Francisco+Javier+Mina+17,+Centro,+60300+Los+Reyes+de+Salgado,+Michoacán&output=embed"
                             className="absolute inset-0 h-full w-full border-0"
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
