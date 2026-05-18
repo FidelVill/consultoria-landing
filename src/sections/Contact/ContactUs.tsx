@@ -18,14 +18,14 @@ const contactMethods = [
         id: 3,
         icon: Mail,
         title: 'Envíanos un email',
-        lines: ['carlos.gonzalez@detsp-sercofils.com', 'Responderemos pronto'],
+        lines: ['carlos.gonzalez@desp-sercofis.com', 'Responderemos pronto'],
     },
     {
         id: 4,
         icon: MapPin,
         title: 'Visítanos',
         lines: [
-            'Francisco J. Múgica 17, Int. 4',
+            'Francisco J. Mina 17, Int. 4',
             'Col. Centro, Los Reyes de Salgado,',
             'Michoacán',
         ],
