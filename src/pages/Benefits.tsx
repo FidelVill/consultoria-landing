@@ -7,6 +7,7 @@ import Impact from '@/sections/Benefits/Impact'
 import PowerInfo from '@/sections/Benefits/PowerInfo'
 import TrustStats from '@/sections/Benefits/TrustStats'
 import CTA from '@/sections/shared/CTA'
+import Accompaniment from '@/sections/Benefits/Accompaniment'
 
 const Benefits = () => {
   return (
@@ -14,6 +15,7 @@ const Benefits = () => {
       <Navbar />
       <BenefitsHero />
       <WhyUs />
+      <Accompaniment />
       <WhatWeDo />
       <Impact />
       <PowerInfo />

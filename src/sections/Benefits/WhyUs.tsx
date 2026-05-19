@@ -4,7 +4,7 @@ import { fadeUpVariants, staggerContainer, fadeUpItem } from '@/hooks/useFadeUp'
 
 const WhyUs = () => {
   return (
-    <section className="bg-white py-14 md:py-20">
+    <section className="bg-white py-24 md:py-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div

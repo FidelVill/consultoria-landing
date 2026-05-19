@@ -10,19 +10,19 @@ const stats = [
   {
     id: 1,
     icon: Award,
-    value: '10+',
+    value: '13+',
     label: 'Años de experiencia brindando asesoría contable y financiera.',
   },
   {
     id: 2,
     icon: Users,
-    value: '250+',
+    value: '150+',
     label: 'Empresas y emprendedores que han confiado en nosotros.',
   },
   {
     id: 3,
     icon: Star,
-    value: '98%',
+    value: '99%',
     label: 'Clientes satisfechos con nuestros resultados y atención.',
   },
   {

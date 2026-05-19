@@ -4,7 +4,7 @@ import purpose from '@/assets/purpose.png'
 
 const Purpose = () => {
     return (
-        <section className="bg-blanco-hueso py-10 md:py-20 lg:py-24 overflow-hidden">
+        <section className="bg-blanco-hueso py-10 md:py-10 lg:py-24 overflow-hidden">
             <div className="max-w-[1500px] mx-auto px-5 md:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 28 }}

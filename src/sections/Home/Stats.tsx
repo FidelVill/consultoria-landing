@@ -9,28 +9,28 @@ import {
 const stats = [
     {
         icon: UsersRound,
-        value: 250,
+        value: 150,
         prefix: '+',
         suffix: '',
         label: 'Clientes satisfechos',
     },
     {
         icon: CalendarCheck2,
-        value: 10,
+        value: 13,
         prefix: '+',
         suffix: '',
         label: 'Años de experiencia',
     },
     {
         icon: BriefcaseBusiness,
-        value: 500,
+        value: 100,
         prefix: '+',
         suffix: '',
         label: 'Proyectos realizados',
     },
     {
         icon: HeartHandshake,
-        value: 98,
+        value: 99,
         prefix: '',
         suffix: '%',
         label: 'Tasa de satisfacción',

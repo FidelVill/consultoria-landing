@@ -12,11 +12,11 @@ const segmentAngle = 72
 const toRad = (deg: number) => (deg * Math.PI) / 180
 
 const services = [
-  { icon: Search,     lines: ['Analizamos',     'tu información']           },
-  { icon: Lightbulb,  lines: ['Detectamos',     'oportunidades']            },
-  { icon: Target,     lines: ['Diseñamos',      'estrategias']              },
-  { icon: Settings,   lines: ['Implementamos',  'soluciones']               },
-  { icon: TrendingUp, lines: ['Te acompañamos', 'y medimos resultados']     },
+  { icon: Search, lines: ['Analizamos', 'tu información'] },
+  { icon: Lightbulb, lines: ['Detectamos', 'oportunidades'] },
+  { icon: Target, lines: ['Diseñamos', 'estrategias'] },
+  { icon: Settings, lines: ['Implementamos', 'soluciones'] },
+  { icon: TrendingUp, lines: ['Te acompañamos', 'y medimos resultados'] },
 ]
 
 const listItems = [
@@ -48,7 +48,7 @@ const positions = Array.from({ length: 5 }, (_, i) => {
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-negro-premium py-20">
+    <section className="bg-negro-premium py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {/* Columna izquierda */}

@@ -4,6 +4,11 @@ import {
     Star,
     Users,
     ShieldCheck,
+    Lightbulb,
+    Award,
+    Briefcase,
+    HeartHandshake,
+    MessagesSquare,
 } from 'lucide-react'
 
 const values = [
@@ -34,6 +39,34 @@ const values = [
         description:
             'Protegemos tu información con los más altos estándares de seguridad.',
         icon: ShieldCheck,
+    },
+    {
+        id: 5,
+        title: 'Acompañamiento Real',
+        description:
+            'Te acompañamos en cada etapa con atención cercana, seguimiento constante y soluciones pensadas para ti.',
+        icon: HeartHandshake,
+    },
+    {
+        id: 7,
+        title: 'Cercanía',
+        description:
+            'Construimos relaciones basadas en confianza, atención humana y comunicación constante.',
+        icon: MessagesSquare,
+    },
+    {
+        id: 8,
+        title: 'Innovación',
+        description:
+            'Aplicamos soluciones modernas y eficientes para mejorar cada proceso.',
+        icon: Lightbulb,
+    },
+    {
+        id: 9,
+        title: 'Responsabilidad',
+        description:
+            'Actuamos con profesionalismo y dedicación en cada proyecto y servicio.',
+        icon: Briefcase,
     },
 ]
 
