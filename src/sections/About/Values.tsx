@@ -5,7 +5,6 @@ import {
     Users,
     ShieldCheck,
     Lightbulb,
-    Award,
     Briefcase,
     HeartHandshake,
     MessagesSquare,
